@@ -21,14 +21,15 @@ var discountOld = (price / 100) * 40;
 //console.log(discountOld)
 
 if (age < 18) {
-  text.innerHTML = 'il prezzo del biglietto è: ' + price - discountYoung + '€';
+  text.innerHTML = 'il prezzo del biglietto è: ' + (price - discountYoung).toFixed(2) + '€';
   console.log(discountYoung);
 }
 else if (age > 65) {
-  text.innerHTML = 'il prezzo del biglietto è: ' + price - discountOld + '€';
+
+  text.innerHTML = 'il prezzo del biglietto è: ' + (price - discountOld).toFixed(2) + '€';
   console.log(discountOld)
 }
 else {
-  text.innerHTML = 'il prezzo del biglietto è: ' + price + '€';
+  text.innerHTML = 'il prezzo del biglietto è: ' + price.toFixed(2) + '€';
   console.log(price + '€');
 }
